@@ -2920,14 +2920,15 @@ body {
   overflow-x: hidden;
   opacity: 1; }
   body.ishome .site-header {
-    width: 100vw;
+    width: 100%;
     min-height: 700px;
     height: 100vh;
     background-color: #ff2a47; }
     body.ishome .site-header .top-line {
       position: absolute;
       width: 100%;
-      z-index: 1; }
+      z-index: 1;
+      top: -24px; }
     body.ishome .site-header span {
       color: #d5d0d5;
       font-weight: bolder; }
@@ -2941,7 +2942,7 @@ body {
       top: 45px;
       font-size: 28px;
       position: absolute;
-      right: 95px;
+      right: 85px;
       font-family: 'Firasans', sans-serif;
       white-space: nowrap;
       color: black; }
@@ -2956,15 +2957,11 @@ body {
       margin-right: 8px; }
 
 header {
+  background-image: url("../img/top-bg.jpg");
   position: relative;
   background-size: cover;
-  background-position: center;
-  color: #000000; }
-
-section {
-  display: block;
-  max-width: 100%;
-  height: auto; }
+  color: #000000;
+  background-position: 60%; }
 
 .h1, .h2, h3, h4, h5 {
   line-height: 1.4;
@@ -3082,12 +3079,11 @@ html.mm-opened {
 .header-composition {
   text-align: center;
   position: relative;
-  width: 80%; }
+  width: 100%; }
   .header-composition p {
     margin-top: 0; }
 
 .welcome p {
-  font-family: 'SFUIDisplay-Regular', sans-serif;
   font-size: 18px;
   text-transform: uppercase;
   display: flex;
@@ -3117,7 +3113,7 @@ html.mm-opened {
   display: block;
   text-transform: uppercase;
   font-size: 18px;
-  margin-top: 10px; }
+  margin-top: 5px; }
 
 .header-social {
   position: absolute;
@@ -3162,33 +3158,22 @@ html.mm-opened {
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
-  header {
-    background-position: 48% 30%; }
-  .header-contacts {
-    font-size: 14px; }
-  .welcome .h1 {
-    font-size: 72px; } }
+  /**/ }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
-  header {
-    background-position: 50% 0; }
-  .welcome .h1 {
-    font-size: 46px; }
-  .phone span {
-    font-size: 19px; } }
+  /**/ }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
-  .site-header {
-    background-image: none;
-    background: linear-gradient(to bottom, rgba(227, 150, 155, 0.98), rgba(226, 103, 103, 0.91), rgba(227, 122, 125, 0.99)); } }
+  header {
+    background-position-x: 53%; }
+  .header-social {
+    border-left: none; } }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
-  h1 {
-    margin-top: 20px !important;
-    font-size: 38px !important; } }
+  /**/ }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
@@ -3208,6 +3193,9 @@ html.mm-opened {
   /**/ }
 
 /* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+  /**/ }
+
 /* Large Devices, Wide Screens */
 @media only screen and (min-width: 1200px) {
   /**/ }
